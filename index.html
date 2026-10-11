@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7fa">
+  <title>Hillery — My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#home" class="logo">h<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-button">Contact ↗</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="eyebrow"><span class="status-dot"></span> INFORMATICS STUDENT</span>
+        <h1>Hi, I'm <span>Hillery.</span><br>Creative mind,<br><i>tech enthusiast.</i></h1>
+        <p>Mahasiswa Teknik Informatika yang tertarik pada teknologi, desain website, dan hal-hal kreatif.</p>
+        <div class="hero-buttons">
+          <a href="#about" class="primary-btn">Discover more ↗</a>
+          <a href="#contact" class="text-btn">Let's talk</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Foto profil Hillery">
+        <div class="pink-circle"></div>
+        <span class="sparkle sparkle-one">✳</span>
+        <span class="sparkle sparkle-two">✦</span>
+        <div class="photo-card">
+          <img src="hillery.jpg.jpeg" class="profile-photo" alt="Foto profil Hillery">
+          <div class="photo-caption"><span>Hillery ♡</span><span>2026</span></div>
+        </div>
+        <div class="floating-note">little steps,<br>big dreams ✿</div>
+      </div>
+      <a href="#about" class="scroll-hint">SCROLL TO EXPLORE ↓</a>
+    </section>
+
+    <section id="about" class="section reveal">
+      <span class="section-label">01 — ABOUT ME</span>
+      <h2>A little bit about <i>myself.</i></h2>
+      <div class="about-grid">
+        <p class="about-big">Curious by nature, <span>creative by heart.</span></p>
+        <p class="description">Halo! Saya Hillery, mahasiswa Teknik Informatika sejak 2025. Saya senang mempelajari teknologi, mengembangkan keterampilan digital, dan mengeksplorasi desain website.</p>
+      </div>
+    </section>
+
+    <section class="section education reveal">
+      <span class="section-label">02 — EDUCATION</span>
+      <h2>My learning <i>journey.</i></h2>
+      <div class="timeline">
+        <span class="year">2025 — PRESENT</span>
+        <h3>Teknik Informatika</h3>
+        <p>Mahasiswa · Sedang menempuh pendidikan</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <span class="section-label">03 — WHAT I DO</span>
+      <h2>Things I'm <i>exploring.</i></h2>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <span class="skill-number">01</span><span class="skill-icon">⌘</span>
+          <h3>Web Development</h3><p>Mempelajari HTML, CSS, dan pembuatan website.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">02</span><span class="skill-icon">✳</span>
+          <h3>Creative Design</h3><p>Mengeksplorasi warna, tipografi, dan tampilan visual.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">03</span><span class="skill-icon">♡</span>
+          <h3>Continuous Learning</h3><p>Terus belajar dan mencoba kemampuan baru.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section reveal">
+      <span class="section-label">04 — GET IN TOUCH</span>
+      <h2>Let's create something<br><i>lovely together.</i></h2>
+      <p>Terbuka untuk berbagi ide dan belajar bersama.</p>
+      <a class="primary-btn" href="mailto:hillery901@gmail.com">Say hello ↗</a>
+      <div class="contact-details">
+        <a href="mailto:hillery901@gmail.com">hillery901@gmail.com</a>
+        <a href="tel:081935660383">081935660383</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">h<span>.</span></a>
+    <p>Made with ♡ by Hillery</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
